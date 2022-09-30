@@ -7,7 +7,7 @@
 
 **Java**
 
-**Entry point of the Programme **
+**Entry point of the Programme**
 
 -src
   - Airline.java
@@ -25,6 +25,8 @@ airlines.csv
 
 ### NB
 clone repo
+
+**git clone** ` 
 
 `cd src`
 
