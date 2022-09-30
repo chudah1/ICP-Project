@@ -7,7 +7,7 @@
 
 **Java**
 
-**Entry point of the Programme **
+**Entry point of the Programme**
 
 -src
   - Airline.java
