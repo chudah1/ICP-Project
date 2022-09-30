@@ -26,6 +26,8 @@ airlines.csv
 ### NB
 clone repo
 
+**git clone** ` 
+
 `cd src`
 
 run `javac Main.java`
