@@ -3,7 +3,8 @@
 
 ### Folder Structure
 
-** Entry point of the Programme **
+**Entry point of the Programme **
+
 -src
   - Airline.java
   - Airport.java
@@ -19,7 +20,7 @@ aiports.csv
 ### NB
 clone repo
 
-`cd src `
+`cd src`
 run javac Main.java
 run java Main
   
