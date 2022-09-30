@@ -1,4 +1,4 @@
-1. U2 from LTN to BCN 0 stops
+1. AA from LHR to ACC 0 stops
 Total flights: 1
 Total additional stops: 0
 Optimality Criteria: Flights
