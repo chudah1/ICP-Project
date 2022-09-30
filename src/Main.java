@@ -79,6 +79,10 @@ public class Main {
         }
     }
 
+/**
+ * It reads the start and destination airports from the file, and then calls the bfs method with the startAirport as the
+ * parameter
+ */
 public static void main(String[] args) {
     try {
         File file = new File("accra-london.txt");
@@ -96,6 +100,7 @@ public static void main(String[] args) {
         System.out.println(e.getStackTrace());
     }
 
+    // Calling the bfs method with the startAirport as the parameter.
     bfs(startAirport);
 }
 
