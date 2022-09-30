@@ -31,7 +31,6 @@ public class Airline {
     public static  HashMap<String, ArrayList<String>> readAirlines() throws FileNotFoundException {
         File airportfile = new File("airlines.csv");
         Scanner scan = new Scanner(airportfile);
-        //{country:['Airlines]'}
         HashMap<String, ArrayList<String>> airportLocation = new HashMap<>();
         ArrayList<String> airlines = new ArrayList<>();
         String airlineIdIataCode = "";

@@ -57,8 +57,8 @@ public class Main {
         HashSet<String> visited = new HashSet<>();
         for (String state : availableAirports) {
             Node start = new Node(state);
+            if (foundDestination(start.getState())) start.solutionPath();
             frontier.add(start);
-            if (foundDestination(state)) start.solutionPath();
         }
 
         while (!frontier.isEmpty()) {
