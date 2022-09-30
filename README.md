@@ -3,6 +3,10 @@
 
 ### Folder Structure
 
+### Tech Stack
+
+**Java**
+
 **Entry point of the Programme **
 
 -src
