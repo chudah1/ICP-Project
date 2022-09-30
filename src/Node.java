@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class Node {
     private String state;
@@ -72,6 +73,16 @@ public class Node {
      * This function is used to print the solution path to a file
      */
     public void solutionPath() {
+        String startCity ="";
+        String destinationCity="";
+        try {
+            File file = new File("accra-london.txt");
+            Scanner scan = new Scanner(file);
+            startCity = scan.nextLine().split(",")[0];
+            destinationCity = scan.nextLine().split(",")[0];
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         ArrayList<String> solution = new ArrayList<>();
         String path = "";
         Node curr = this;
@@ -83,7 +94,7 @@ public class Node {
         Collections.reverse(solution);
 
         try {
-            FileWriter myWriter = new FileWriter("accra-london_output.txt");
+            FileWriter myWriter = new FileWriter(startCity + "-" + destinationCity +"_" + "output.txt");
             PrintWriter printWriter = new PrintWriter(myWriter);
             int number = 1;
             for (String solutionpath : solution) {
