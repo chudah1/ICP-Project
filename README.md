@@ -21,7 +21,9 @@ aiports.csv
 clone repo
 
 `cd src`
-run javac Main.java
-run java Main
+
+run `javac Main.java`
+
+run `java Main`
   
   
