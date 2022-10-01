@@ -1,3 +1,4 @@
+import javax.print.DocFlavor;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -37,6 +38,10 @@ public class Main {
      * @return A boolean value.
      */
     public static boolean foundDestination(String state){
+        if (!airports.containsKey(destinationAirport)){
+            System.out.println("Specified destination does not exist");
+            System.exit(-1);
+        }
         airportsInDest = airports.get(destinationAirport);
         return airportsInDest.contains(state);
     }
@@ -85,15 +90,23 @@ public class Main {
  */
 public static void main(String[] args) {
     try {
-        File file = new File("accra-london.txt");
+        final String REGEX = "\\s*,\\s*";
+        final String REPLACE = ",";
+        File file = new File("london-banjul.txt");
         Scanner scan = new Scanner(file);
         startAirport = scan.nextLine();
+        startAirport = startAirport.replaceAll(REGEX, REPLACE);
         destinationAirport = scan.nextLine();
+        destinationAirport = destinationAirport.replaceAll(REGEX,REPLACE);
     } catch (FileNotFoundException e) {
         throw new RuntimeException(e);
     }
 
     try {
+        if(!airports.containsKey(startAirport)){
+            System.out.println("Specified start city does not exist");
+            System.exit(-1);
+        }
         airportsInStart = airports.get(startAirport);
         airportsInDest = airports.get(destinationAirport);
     } catch (Exception e) {

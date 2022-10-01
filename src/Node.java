@@ -76,10 +76,10 @@ public class Node {
         String startCity ="";
         String destinationCity="";
         try {
-            File file = new File("accra-london.txt");
+            File file = new File("london-banjul.txt");
             Scanner scan = new Scanner(file);
-            startCity = scan.nextLine().split(",")[0];
-            destinationCity = scan.nextLine().split(",")[0];
+            startCity = scan.nextLine().split(",")[0].trim();
+            destinationCity = scan.nextLine().split(",")[0].trim();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
